@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://finai-et.netlify.app/sitemap.xml
