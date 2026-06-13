@@ -32,6 +32,24 @@ Interactive spending trends and category breakdown charts using Recharts.
 
 ---
 
+## 🤖 Autonomous AI Financial Agent (Architecture)
+
+FinAI is engineered with an **autonomous AI financial agent** that sits on the backend server, orchestrating user budget monitoring and expense analysis:
+
+*   **Perception (Observation):** The agent monitors database changes—specifically, new transactions (manually logged or scanned via the OCR engine) and monthly budget updates.
+*   **Cognitive Reasoning:** 
+    - The agent runs semantic analysis on transaction notes to auto-categorize expenses (e.g., matching "Went to KFC" to `Food`).
+    - It evaluates overall spending velocity against monthly category limits.
+    - It predicts potential budget breaches based on historical patterns.
+*   **Action Execution:** 
+    - Generates personalized, action-oriented saving tips.
+    - Dynamically drafts warning records directly into the MongoDB notifications collection.
+    - Dispatches instant alerts via WebSockets (`Socket.io`) to trigger real-time in-app warnings on the user's dashboard.
+
+This implements a complete **Observe ➔ Reason ➔ Act** loop, turning the application into an active financial planner rather than a passive logbook.
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
